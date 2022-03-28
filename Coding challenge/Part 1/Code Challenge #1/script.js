@@ -5,10 +5,10 @@ Mark and John are trying to compare their BMI (Body Mass Index), which is calcul
 BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter).
 
 Your tasks:
-1. StoreMark'sandJohn'smassandheightinvariables
-2. CalculateboththeirBMIsusingtheformula(youcanevenimplementboth
+1. Store Mark's and John's mass and height in variables
+2. Calculate both their BMIs using the formula(you can even implement both
 versions)
-3. CreateaBooleanvariable'markHigherBMI'containinginformationabout
+3. Createa Boolean variable'markHigherBMI' containing information about
 whether Mark has a higher BMI than John.
 
 Test data:
@@ -16,3 +16,13 @@ Test data:
 § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 
 */
+
+let MarksHeight = 1.69 ;
+let MarksMass = 78;
+let JohnsHeight = 1.95;
+let JohnsMass = 92;
+
+let BMIMark = MarksMass/MarksHeight ** 2
+let BMIJohn = JohnsMass/JohnsHeight ** 2
+let markHigherBMI = BMIMark > BMIJohn
+console.log(BMIMark, BMIJohn, markHigherBMI)
