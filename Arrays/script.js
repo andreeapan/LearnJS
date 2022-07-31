@@ -38,72 +38,116 @@ const restaurant = {
 
   orderPasta: function(ing1, ing2, ing3){
       console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
-  }
+  },
+
+  orderPizza: function(mainIngredient, ...otherIngredients){{
+    console.log('mainIngredient', mainIngredient);
+    console.log('otherIngredients', otherIngredients);
+  }}
 };
 
-restaurant.orderDelivery({
-  time: "22:30",
-  address: "Sole",
-  mainIndex: 2,
-  starterIndex: 0
-})
 
 
-const [starter, main] = restaurant.order(2,0);
-// console.log(starter, main);
+// REST PATTERN AND PARAMETERS
+// 1. Destructuring
+//SPREAD, because on RIGHT side of =
+// const arr = [1, 2, ...[3,4]];
 
-const {name, openingHours, categories} = restaurant;
-// console.log(name,openingHours, categories);
+//REST, because on the LEFT side of =
+// const [a, b, ...others] = [1,2,3,4,5];
+// console.log(a,b, others);
 
-const{
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags
-} = restaurant;
-// console.log( hours)
-
-//nested objects
-const {fri: {open, close}} = openingHours
-// console.log(open,close);
-
-
-//mutating variables
-// let a = 23;
-// let b = 39;
-// const obj = {a:40, b:11, c:98};
-// ({a,b} = obj)
-// console.log(a,b)
-
-//Spread operator
-const arr = [3,4,5]
-const newArray = [1,2, ...arr]
-// console.log(newArray);
-
-const newMenu = [...restaurant.mainMenu, 'Gelato', 'Orichette', 'Tomato']
-// console.log('new menu', newMenu);
-
-//copy array
-const mainMenuCopy = [...restaurant.mainMenu]
-
-
-//join 2 arrays
-const joinedMenus = [...restaurant.mainMenu, ...restaurant.starterMenu]
-// console.log(joinedMenus);
-
-//Iterables: arrays, strings, maps, sets. NOT objects
-const str = 'Jonas'
-const letters = [...str, '', '.S'] 
-// console.log('new str', letters);
-
-const ingridients = [
-  // prompt("Let's make pasta! Ingridient 1?"),
-  // prompt("Ingridient 2?"),
-  // prompt("Ingridient 3?")
-]
-
-restaurant.orderPasta(...ingridients)
+// const [pizza, ,risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(pizza,risotto, otherFood);
 
 //Objects
-const newRestaurant = {foundedIn: 1965, ...restaurant, foundedBy: 'Giuseppe'}
-console.log(newRestaurant);
+// const {sat, ...weekDays} = restaurant.openingHours;
+// console.log('weekdays', weekDays);
+
+// 2. Functions
+
+// const add = function(...numbers){
+//   let sum = 0;
+//   for(let i = 0; i<numbers.length; i++) sum += numbers[i]
+//   // console.log('sum', sum);
+// }
+
+// add(1,2);
+// add(3,4,5,6);
+// add(7,8,9,1,2,4,5);
+
+// const x = [23,5,7];
+// add(...x)
+
+
+// restaurant.orderPizza('mushroom', 'onion', 'olives', 'spinach')
+
+// restaurant.orderPizza('mushroom')
+
+
+// restaurant.orderDelivery({ 
+//   time: "22:30",
+//   address: "Sole",
+//   mainIndex: 2,
+//   starterIndex: 0
+// })
+
+
+// const [starter, main] = restaurant.order(2,0);
+// // console.log(starter, main);
+
+// const {name, openingHours, categories} = restaurant;
+// // console.log(name,openingHours, categories);
+
+// const{
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags
+// } = restaurant;
+// // console.log( hours)
+
+// //nested objects
+// const {fri: {open, close}} = openingHours
+// // console.log(open,close);
+
+
+// //mutating variables
+// // let a = 23;
+// // let b = 39;
+// // const obj = {a:40, b:11, c:98};
+// // ({a,b} = obj)
+// // console.log(a,b)
+
+// //Spread operator
+// const arr = [3,4,5]
+// const newArray = [1,2, ...arr]
+// // console.log(newArray);
+
+// const newMenu = [...restaurant.mainMenu, 'Gelato', 'Orichette', 'Tomato']
+// // console.log('new menu', newMenu);
+
+// //copy array
+// const mainMenuCopy = [...restaurant.mainMenu]
+
+
+// //join 2 arrays
+// const joinedMenus = [...restaurant.mainMenu, ...restaurant.starterMenu]
+// // console.log(joinedMenus);
+
+// //Iterables: arrays, strings, maps, sets. NOT objects
+// const str = 'Jonas'
+// const letters = [...str, '', '.S'] 
+// // console.log('new str', letters);
+
+// const ingridients = [
+//   // prompt("Let's make pasta! Ingridient 1?"),
+//   // prompt("Ingridient 2?"),
+//   // prompt("Ingridient 3?")
+// ]
+
+// restaurant.orderPasta(...ingridients)
+
+// //Objects
+// const newRestaurant = {foundedIn: 1965, ...restaurant, foundedBy: 'Giuseppe'}
+// console.log(newRestaurant);
 
