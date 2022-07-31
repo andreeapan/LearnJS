@@ -46,7 +46,38 @@ const restaurant = {
   }}
 };
 
+//SHORT CIRCUITING (&& AND ||)
+// console.log('------- OR -------');
+// short-circuit when the first value is TRUE!
+//Use ANY data type, return ANY data type, short-circuiting
+//will take the first true value and stop analizying the rest. Because OR means that it's true if at least one of the value is true
+// console.log(3 || 'Jonas')
+// console.log('' || 'Jonas')
+// console.log(true || 0)
+// console.log(undefined || null)
 
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null)
+
+// // restaurant.numGuests = 23;
+// const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log('numGuest', guest1);
+
+// const guest2 = restaurant.numGuests || 10;
+// console.log('NUM GUEST2', guest2);
+
+// console.log('------- AND -------');
+// // short-circuit when the first value is FALSE!
+// // is only true if ALL operants are TRUE
+// console.log(0 && 'Jonas');
+// console.log(7 && 'Jonas');
+// console.log('HELLO' && 23 && null && 'jonas');
+
+// //Practical example
+// if(restaurant.orderPizza){
+//   restaurant.orderPizza('mushrrom', 'spinach');
+// }
+
+// restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 // REST PATTERN AND PARAMETERS
 // 1. Destructuring
