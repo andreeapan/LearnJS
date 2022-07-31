@@ -46,6 +46,42 @@ const restaurant = {
   }}
 };
 
+//Logical assignment operators
+const res1 = {
+  name: 'Capri',
+  // numGuests: 20
+  numGuests: 0
+}
+
+const res2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi'
+}
+
+//OR assignment operator
+// res1.numGuests = res1.numGuests || 10;
+// res2.numGuests = res2.numGuests || 10;
+// res1.numGuests ||= 10;
+// res2.numGuests ||= 10;
+
+// res1.numGuests ??= 10;
+// res2.numGuests ??= 10;
+
+//AND assignment operator
+// assigns a value to a variable if it's TRUTHY!
+// res1.owner = res1.owner && '<ANONYMOUS>' // => UNDEFINED
+// res2.owner = res2.owner && '<ANONYMOUS>' // => '<ANONYMOUS>'
+
+// res1.owner &&='<ANONYMOUS>' 
+// res2.owner &&='<ANONYMOUS>' 
+console.log(res1);
+console.log(res2);
+
+// NULLISH: null and undefined (NOT 0 or '')
+// restaurant.numGuests = 0;
+// const guest2 = restaurant.numGuests ?? 10;
+// console.log('NUM GUEST2', guest2);
+
 //SHORT CIRCUITING (&& AND ||)
 // console.log('------- OR -------');
 // short-circuit when the first value is TRUE!
