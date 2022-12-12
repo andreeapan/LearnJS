@@ -276,21 +276,112 @@ const flights =
 // console.log(newRestaurant);
 
 //Map
-const rest = new Map();
-rest.set('name', 'Classico Italiano');
-rest.set(1, 'Firenze, Italy')
+// const rest = new Map();
+// rest.set('name', 'Classico Italiano');
+// rest.set(1, 'Firenze, Italy')
 // console.log(rest.set(1, 'Lisbon, Portugal'))
 
-rest
-.set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
-.set('open', 11)
-.set('close', 23)
-.set(true, 'We are open!:)')
-.set(false, 'We are close!:(')
+//set it's hard to use when there are a lot of data
+// rest
+// .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+// .set('open', 11)
+// .set('close', 23)
+// .set(true, 'We are open!:)')
+// .set(false, 'We are close!:(')
 
-let time = 21;
-console.log(rest.get(time > rest.get('open') && time < rest.get('close')))
+// let time = 21;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')))
 
-console.log(rest.has('categories'));
-rest.delete(2);
-console.log(rest);
+// console.log(rest.has('categories'));
+// rest.delete(2);
+// console.log(rest);
+
+//this is a better way to add elements
+// const question = new Map([
+//   ['question', 'What is the best programming language in the world?'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'JavaScript'],
+//   ['correct', 3],
+//   [true, 'Correct!'],
+//   [false, 'Try again!']
+// ])
+// console.log(question)
+
+// //Convert from Objects to Map
+// console.log(Object.entries(openingHours)); // => because it return exactly the same response as map
+// const hoursMap = new Map(Object.entries[openingHours]);
+// console.log(hoursMap)
+
+// // //Quiz app
+// console.log(question.get('question'))
+// for(const [key, value] of question){
+//   if(typeof key === 'number') console.log(`Answer ${key}: ${value}`)
+// }
+// const ansewer = Number(prompt('Your answer'))
+// console.log(ansewer)
+
+// question.get('correct') === ansewer ? console.log(question.get(true)) : console.log(question.get(false))
+
+//Working with Strings
+// const checkMiddleSeat = function(seat){
+//   // B and E are middle seats
+//   const s = seat.slice(-1)
+//   console.log(s)
+//   if(s === 'B' || s === 'E'){
+//     console.log("you got the middle seat")
+//   } else {
+//     console.log("You are lucky!")
+//   }
+
+// }
+
+// checkMiddleSeat('11B')
+// checkMiddleSeat('23C')
+// checkMiddleSeat('3E')
+
+//Comparing emails
+// const email = 'hello@jonas.io'
+// const loginEmail = ' Hello@Jonas.Io \n';
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+// console.log(normalizedEmail);
+// console.log(email === normalizedEmail);
+
+
+//replacing 
+// const priceGB = '288,97&'
+// const priceUS = priceGB.replace('&', '$')
+// console.log(priceUS);
+
+// const announcement = 'All passangers come to boarding door 23. Boarding door 23!'
+// console.log(announcement.replaceAll('door', 'gate'));
+
+//using regular expressions
+// console.log(announcement.replace(/door/g, 'gate'));
+
+//Booleans
+// const plane = 'Airbus A320neo'
+// console.log(plane.includes('A320'))
+// console.log(plane.startsWith('Air'))
+
+//Capitalize the first letters of a name
+
+// const capitalizeName = function(name){
+//   const names = name.split(' ');
+//   const namesUpper = [];
+
+//   for(const n of names){
+//     namesUpper.push(n[0].toUpperCase() + n.slice(1))
+//   }
+//   console.log(namesUpper.join(' '));
+// }
+
+// capitalizeName('andreea maria pantea')
+
+//Padding a string
+const message = 'Go to gate 23!'
+console.log(message.padStart(25, '+').padEnd(35, '+'));
