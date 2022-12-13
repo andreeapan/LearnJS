@@ -382,6 +382,6 @@ const flights =
 
 // capitalizeName('andreea maria pantea')
 
-//Padding a string
-const message = 'Go to gate 23!'
-console.log(message.padStart(25, '+').padEnd(35, '+'));
+// //Padding a string
+// const message = 'Go to gate 23!'
+// console.log(message.padStart(25, '+').padEnd(35, '+'));
